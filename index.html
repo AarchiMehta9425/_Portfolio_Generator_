@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- =====BOX ICONS===== -->
+
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="mycss.css">
+
+    <title>Portfolio website complete</title>
+
+</head>
+
+<body>
+
+    <!--===== HEADER =====-->
+    <header class="l-header" style="margin-bottom: 30px;">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo"><input type="text" id="name" placeholder="Name"
+                        oninput="SendInputValue()"></a>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#Softskills" class="nav__link">Soft Skills</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+
+        <section class="home bd-grid section hero-section" id="home">
+
+            <div class="home__data intro">
+                <h1>Hi I'm </h1>
+                <br>
+                <input type="text" class="userinputHome" placeholder="Ex : Aarchi mehta" id="userid">
+                <br>
+                <input type="text" placeholder="Ex: Webdeveloper" class="userinputHomeRole">
+            </div>
+
+            <div class="home__img">
+                <img src="./image2.jpg" alt="" class="imagee profile-image" id="imageInput">
+                <input type="file" id="fileInput" accept="image/*" style="display:none;">
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+
+        <section class="about section" id="about">
+            <h2 class="section-title">About</h2>
+            <div class="about__container bd-grid gap-5">
+                <div class="about__img">
+                    <img src="./image.jpg" alt="" id="imageInput2">
+                    <input type="file" id="fileInput2" accept="image/*" style="display:none;">
+                </div>
+                <div class="about__data">
+                    <div class="dataaa">
+                        <div class="about__subtitle one">I'm</div>
+                        <div class="about__subtitle two"><input type="text" placeholder="Aarchi Mehta" id="userid">
+                        </div>
+                    </div>
+                    <textarea id="aboutText" cols="60" rows="15" class="tArea"
+                        placeholder="Ex: Hello, I am here..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!--===== SKILLS =====-->
+
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="Skills_con">
+                <div class="Skill_list">
+                    <!-- <h2 class="skills__subtitle" style="text-align: center;  margin-bottom:10% ;">Profesional Skills -->
+                    <!-- </h2> -->
+                    <div class="skills__data"
+                        style="display: flex; justify-content: space-between; align-items: center;">
+                        <div id="bars-wrapper">
+                            <div class="bar-container">
+                                <input type="text" class="bar-name" value="Enter skill 1 : "
+                                    oninput="updateBarName(this)" />
+                                <div class="bar">
+                                    <div class="bar-filled" style="width: 25%;"></div>
+                                    <span class="bar-value">25%</span>
+                                    <input type="range" min="0" max="100" value="25" oninput="resizeBar(this)" />
+                                </div>
+                            </div>
+                        </div>
+                        <button id="add-bar-btn" onclick="addBar()">Add Skills</button>
+                        <button id="done-btn" onclick="done()" style="display: none;">Done</button>
+                    </div>
+                </div>
+                <div class="Skill_image">
+                    <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                </div>
+            </div>
+        </section>
+
+        <!--===== SOFT SKILLS =====-->
+        <section class="skills section" id="Softskills">
+            <h2 class="section-title">Soft Skills</h2>
+            <div class="Skills_con">
+                <div class="Skill_list">
+                    <!-- <h2 class="skills__subtitle" style="text-align: center;  margin-bottom:10% ;">Soft Skills</h2> -->
+                    <div class="skills__data">
+                        <div id="s-bars-wrapper">
+                            <div class="bar-container">
+                                <input type="text" class="bar-name" value="Enter Skill 1"
+                                    oninput="supdateBarName(this)" />
+                                <div class="bar">
+                                    <div class="bar-filled" style="width: 25%;"></div>
+                                    <span class="bar-value">25%</span>
+                                    <input type="range" min="0" max="100" value="25" oninput="sresizeBar(this)" />
+                                </div>
+                            </div>
+                        </div>
+                        <button id="s-add-bar-btn" onclick="saddBar()">Add Skills</button>
+                        <button id="s-done-btn" onclick="sdone()" style="display: none;">Done</button>
+                    </div>
+                </div>
+                <div class="Skill_image">
+                    <img src="Soft-Skills-image-on-blackboard.webp" alt="" class="skills__img">
+                </div>
+            </div>
+        </section>
+
+        <!--===== WORK =====-->
+        <section class="work section" id="work">
+            <h2 class="section-title">Work</h2>
+            <div class="work__container bd-grid">
+                <a href="" class="work__img">
+                    <img src="assets/img/work1.jpg" alt="">
+                </a>
+                <a href="" class="work__img">
+                    <img src="assets/img/work2.jpg" alt="">
+                </a>
+                <a href="" class="work__img">
+                    <img src="assets/img/work3.jpg" alt="">
+                </a>
+                <a href="" class="work__img">
+                    <img src="assets/img/work4.jpg" alt="">
+                </a>
+                <a href="" class="work__img">
+                    <img src="assets/img/work5.jpg" alt="">
+                </a>
+                <a href="" class="work__img">
+                    <img src="assets/img/work6.jpg" alt="">
+                </a>
+            </div>
+        </section>
+
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact__container bd-grid">
+                <form action="" class="contact__form">
+                    <input type="mail" placeholder="Enter Email" class="contact__input" style="height: 80px;width: 350px;">
+                    
+                    
+                    <input type="tel" placeholder="Enter phone number" class="contact__input" style="height: 80px;width: 350px;">
+                    <textarea name="" id="" rows="3" cols="33" placeholder="Enter any other information you wish to show" rows="2"
+                    class="contact__input"></textarea>
+                    <input type="button" value="Done" class="contact__button button">
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title"><input type="text" id="userid" class="footerinput" style="color: white;"></p>
+
+    </footer>
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+
+    <!--===== html2canvas LIBRARY =====-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <!--===== jsPDF LIBRARY =====-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!--===== CUSTOM JS =====-->
+    <script src="myjjs.js"></script>
+    <!-- <script>
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF({
+                orientation: "portrait",
+                unit: "mm",
+                format: "a4",
+            });
+    
+            const sections = document.querySelectorAll("section"); // Select only sections
+    
+            let yOffset = 10; // Initial Y position
+    
+            function addSectionToPDF(section, callback) {
+                html2canvas(section, { scale: 2 }).then((canvas) => {
+                    const imgData = canvas.toDataURL("image/png");
+                    const imgWidth = 190; // A4 width minus margins
+                    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    
+                    if (yOffset + imgHeight > 280) {
+                        pdf.addPage(); // Add new page if content exceeds page height
+                        yOffset = 10; // Reset yOffset for new page
+                    }
+    
+                    pdf.addImage(imgData, "PNG", 10, yOffset, imgWidth, imgHeight);
+                    yOffset += imgHeight + 10; // Adjust yOffset for the next section
+    
+                    callback(); // Process the next section
+                });
+            }
+    
+            function processSections(index) {
+                if (index < sections.length) {
+                    addSectionToPDF(sections[index], () => processSections(index + 1));
+                } else {
+                    pdf.save("portfolio.pdf"); // Save after all sections are added
+                }
+            }
+    
+            processSections(0); // Start processing sections
+        }
+    
+        // Add a button to generate PDF
+        const pdfButton = document.createElement("button");
+        pdfButton.textContent = "Generate PDF";
+        pdfButton.style.position = "fixed";
+        pdfButton.style.bottom = "20px";
+        pdfButton.style.right = "20px";
+        pdfButton.style.padding = "10px 20px";
+        pdfButton.style.backgroundColor = "#007BFF";
+        pdfButton.style.color = "#FFF";
+        pdfButton.style.border = "none";
+        pdfButton.style.borderRadius = "5px";
+        pdfButton.style.cursor = "pointer";
+        pdfButton.onclick = generatePDF;
+    
+        document.body.appendChild(pdfButton);
+    </script>
+     -->
+    <script>
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF({
+                orientation: "portrait",
+                unit: "mm",
+                format: "a4",
+            });
+
+            const sections = document.querySelectorAll("section"); // Select all sections
+            let yOffset = 10; // Initial Y position
+
+            function captureSection(section, callback) {
+                html2canvas(section, { scale: 2, useCORS: true, allowTaint: true })
+                    .then((canvas) => {
+                        const imgData = canvas.toDataURL("image/png");
+                        const imgWidth = 190; // Adjusted for A4
+                        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+                        if (yOffset + imgHeight > 280) {
+                            pdf.addPage(); // Add new page if needed
+                            yOffset = 10; // Reset yOffset
+                        }
+
+                        pdf.addImage(imgData, "PNG", 10, yOffset, imgWidth, imgHeight);
+                        yOffset += imgHeight + 10;
+
+                        callback();
+                    });
+            }
+
+            function processSections(index) {
+                if (index < sections.length) {
+                    captureSection(sections[index], () => processSections(index + 1));
+                } else {
+                    pdf.save("portfolio.pdf");
+                }
+            }
+
+            // Ensure all images & fonts load before generating PDF
+            setTimeout(() => {
+                processSections(0);
+            }, 1000);
+        }
+
+        // Add "Download PDF" button
+        const pdfButton = document.createElement("button");
+        pdfButton.textContent = "Download PDF";
+        pdfButton.style.position = "fixed";
+        pdfButton.style.bottom = "20px";
+        pdfButton.style.right = "20px";
+        pdfButton.style.padding = "10px 20px";
+        pdfButton.style.backgroundColor = "#007BFF";
+        pdfButton.style.color = "#FFF";
+        pdfButton.style.border = "none";
+        pdfButton.style.borderRadius = "5px";
+        pdfButton.style.cursor = "pointer";
+        pdfButton.onclick = generatePDF;
+
+        document.body.appendChild(pdfButton);
+
+
+
+        // Dynamically update the visible span when user types
+        const nameInput = document.createElement("input");
+        nameInput.type = "text";
+        nameInput.placeholder = "Ex. Aarchi Mehta";
+        nameInput.style.display = "block";
+        nameInput.style.marginTop = "10px";
+        nameInput.style.fontSize = "18px";
+        nameInput.style.padding = "8px";
+        nameInput.style.border = "1px solid #ccc";
+        nameInput.style.borderRadius = "5px";
+        nameInput.style.width = "250px";
+
+        document.querySelector(".userinputwrapper").appendChild(nameInput);
+
+        const nameDisplay = document.getElementById("username");
+
+        nameInput.addEventListener("input", () => {
+            nameDisplay.textContent = nameInput.value || "Aarchi Mehta";
+        });
+
+
+        //         // Replace inputs and textareas temporarily for PDF rendering
+        // const inputs = section.querySelectorAll("input, textarea");
+        // const tempReplacements = [];
+
+        // inputs.forEach((el) => {
+        //     const value = el.value || el.placeholder || "";
+        //     const replacement = document.createElement(el.tagName === "INPUT" ? "span" : "p");
+
+        //     replacement.textContent = value;
+        //     replacement.style.cssText = `
+        //         font-size: ${window.getComputedStyle(el).fontSize};
+        //         font-weight: ${window.getComputedStyle(el).fontWeight};
+        //         padding: ${window.getComputedStyle(el).padding};
+        //         border: none;
+        //         outline: none;
+        //         display: inline-block;
+        //         white-space: pre-wrap;
+        //         width: ${el.offsetWidth}px;
+        //         min-height: ${el.offsetHeight}px;
+        //     `;
+
+        //     el.style.display = "none";
+        //     el.parentNode.insertBefore(replacement, el);
+        //     tempReplacements.push({ el, replacement });
+        // });
+
+        // // Restore original inputs and textareas
+        // tempReplacements.forEach(({ el, replacement }) => {
+        //     replacement.remove();
+        //     el.style.display = "";
+        // });
+
+    </script>
+
+</body>
+
+</html>

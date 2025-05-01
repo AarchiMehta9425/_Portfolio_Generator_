@@ -1,0 +1,372 @@
+input {
+    border: none;
+    outline: none;
+}
+
+#name {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.userinput {
+    color: rgb(9, 9, 53);
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+.footerinput {
+    color: white;
+    background: transparent;
+    font-size: 40px;
+    text-align: center;
+}
+
+#linkform {
+    display: none;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    width: 300px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* #name{
+    font-size: 50px;
+    font-weight:bold;
+    color: rgb(5, 5, 34);
+    } */
+
+
+
+#aboutName {
+    font-size: 20px;
+    color: rgb(5, 5, 34);
+    font-weight: bolder;
+    display: inline-block;
+    width: 450px;
+
+}
+
+.about__data {
+    display: block;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tArea {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: none;
+    font-size: medium;
+    font-weight: bold;
+    color: rgb(26, 25, 25);
+}
+
+.tArea:focus-visible {
+    outline: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.bar-container {
+    display: flex;
+    align-items: center;
+    
+}
+
+.bar {
+    position: relative;
+    background-color: #ccc;
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-left: -20px;
+}
+
+.bar-filled {
+    background-color: #076786;
+    height: 100%;
+    width: 25%;
+    /* Default to 25% */
+    transition: width 0.3s ease;
+}
+
+.bar input[type="range"] {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    pointer-events: all;
+}
+
+.bar input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #008CBA;
+    cursor: pointer;
+}
+
+.bar input[type="range"]::-moz-range-thumb {
+    /* height: 20px;
+    width: 20px; */
+    border-radius: 50%;
+    background: #008CBA;
+    cursor: pointer;
+}
+
+.bar-name {
+    /* margin-right: 10px; */
+    font-weight: bold;
+    width: 40px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+    background-color: transparent;
+    font-size: large !important;
+    /* margin-right: 10px; */
+}
+
+#add-bar-btn,
+#done-btn,
+#s-add-bar-btn,
+#s-done-btn {
+    margin-top: 10px;
+    padding: 5px ;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-bar-btn:hover,
+#done-btn:hover,
+#s-add-bar-btn:hover,
+#s-done-btn:hover {
+    background-color: #005f73;
+}
+
+.bar-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+}
+
+.Skills_con {
+    display: flex;
+    flex-direction: row;
+}
+
+.skills__data {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Skill_list {
+    margin-left: 10%;
+
+}
+
+.Skill_image {
+   height: 500px;
+   width: 500px;
+
+}
+
+/* Home Css */
+
+.userinputHome {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: bolder;
+
+    height: 60px;
+}
+
+.userinputHomeRole {
+
+    color: rgb(8, 109, 150) !important;
+    font-size: 30px;
+    font-weight: bolder;
+    height: 60px;
+}
+
+
+.imagee {
+    /* width: 500px;
+    height: 600px;     */
+    border-radius: 2%;
+}
+
+.userinputintroAbout {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    padding-top: 20px;
+    /* font-weight: bold; */
+    /* margin-bottom: -50px; */
+}
+
+
+@media screen and (min-width: 768px) {
+    .home {
+        padding: 8rem 2rem 16rem;
+        /* scale: 1.2; */
+        margin-top: 100px;
+        /* scale: ; */
+        border-radius: 2%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about__img img {
+        width: 350px;
+        /* height: 300px; */
+        /* margin-right:300px ; */
+    }
+}
+
+/* .dataaa {
+    height: 100px;
+    display: flex;
+}
+
+.about__subtitle {
+    font-size: 25px;
+    display: inline;
+    /* border: 2px solid black; */
+    /* padding-top: ; *
+
+}
+
+.one {
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+.userinputintro {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 40px;
+} */
+
+/* 
+.dataaa {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.about__subtitle.one {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2b2b2b;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.about__subtitle.two input {
+    font-size: 24px;
+    font-weight: 500;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    padding: 5px 10px;
+    min-width: 200px;
+    background: transparent;
+    color: #111;
+}
+
+.about__subtitle.two input::placeholder {
+    color: #888;
+} */
+
+
+.dataaa {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.about__subtitle.one {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2b2b2b;
+    white-space: nowrap;
+}
+
+.about__subtitle.two {
+    font-size: 24px;
+    font-weight: 500;
+    border-bottom: 2px solid #333;
+    padding: 5px 10px;
+    min-width: 200px;
+    color: #111;
+    white-space: nowrap;
+}
+
+.userinputwrapper span {
+    display: inline-block;
+    min-width: 150px;
+    background: transparent;
+}
+
+.userinputwrapper {
+    user-select: none;
+    -webkit-user-select: none; /* for Safari/Chrome */
+    -moz-user-select: none;    /* for Firefox */
+    -ms-user-select: none;     /* for IE/Edge */
+}
+
+.about__subtitle.two {
+    font-size: 1.5rem;
+    font-weight: bold;
+    user-select: none;
+}
+
+input[type="text"] {
+    font-size: 1.6rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 300px;
+    background: transparent;
+    color: #333;
+  }
+  
+.skills__img {
+    border-radius: 0.5rem;
+    margin-top: 100px;
+    margin-left: 30px;
+    /* height: 500px; */
+}
